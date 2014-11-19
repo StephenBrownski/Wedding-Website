@@ -1,0 +1,20 @@
+%p Here is your invitation information!
+
+%ul
+  %li
+    Name: 
+    = @invite.name
+  %li
+    Email: 
+    = @invite.email
+  %li
+    Phone: 
+    = @invite.phone || 'Not Entered'
+  %li
+    Num Guests: 
+    = @invite.num_guests || 'Not selected'
+  %li
+    Status: 
+    = @invite.status
+
+= link_to "RSVP and Edit your details", edit_invite_path(@invite)

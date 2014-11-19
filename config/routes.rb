@@ -17,10 +17,10 @@ Rails.application.routes.draw do
 
   # Admin Invites routes
   namespace :admin do
-    resources :invites
+    resources :invites, :except => [:edit, :update]
   end
 
-
+  resources :invites, :only => [:show, :edit, :update]
 
 
 

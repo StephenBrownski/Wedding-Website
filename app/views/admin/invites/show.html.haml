@@ -1,0 +1,22 @@
+%p Here is your invitation information!
+
+%ul
+  %li
+    Name: 
+    = @invite.name
+  %li
+    Email: 
+    = @invite.email
+  %li
+    Phone: 
+    = @invite.phone || 'Not Entered'
+  %li
+    Num Guests: 
+    = @invite.num_guests || 'Not selected'
+  %li
+    Status: 
+    = @invite.status
+
+= link_to "Back to list view", admin_invites_path
+%br
+= link_to "Delete", admin_invite_path, :method => :delete, :data => { :confirm => "Are you sure?" }

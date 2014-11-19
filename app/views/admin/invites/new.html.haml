@@ -1,0 +1,8 @@
+Create a new invitation
+
+= form_for [:admin, @invite] do |f|
+  = f.label :name
+  = f.text_field :name
+  = f.label :email
+  = f.text_field :email
+  = f.submit 'Send Invite'

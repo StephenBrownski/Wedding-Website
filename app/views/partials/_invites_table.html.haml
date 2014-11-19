@@ -1,0 +1,15 @@
+- if @invites.present?
+  - @invites.each do |invite|
+    %p
+      = invite.name
+      = invite.email
+      = invite.status
+      = link_to "View", admin_invite_path(invite.id)
+
+- else
+  %p No invites to show.
+
+%br
+= link_to "Create a new Invite", new_admin_invite_path
+%br
+= link_to "Back to admin home", admin_path
