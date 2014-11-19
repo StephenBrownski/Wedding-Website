@@ -37,7 +37,7 @@ class AdminController < ApplicationController
   def authorize_user
     if ! session[:logged_in].present? || session[:logged_in] == false
       flash[:error] = 'You are not logged in.'
-      redirect_to :action => 'login_page'
+      redirect_to login_path
     end
   end
 end
