@@ -17,4 +17,4 @@
     Status: 
     = @invite.status
 
-= link_to "RSVP and Edit your details", edit_invite_path(@invite)
+= link_to "RSVP and Edit your details", edit_invite_path(@invite, :token => @token)

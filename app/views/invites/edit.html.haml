@@ -1,6 +1,6 @@
 %p Here is your invitation information!
 
-= form_for @invite do |f|
+= form_for @invite, :url => invite_path(@invite, :token => @token) do |f|
   = f.label :name
   = f.text_field :name
   %br
@@ -16,6 +16,7 @@
   = f.label :status
   = collection_radio_buttons(:invite, :status, Invite::RSVP_STATUSES, :to_s, :to_s)
   %br
+
 
 
   = f.submit 'Submit'
