@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %body
+    %h1 #{@invite.name}! You're invited!
+    %p Alex &amp; Stephen request the pleasure of your company on their wedding day.
+    %h4 Ceremony:
+    %p 15 August, 2015 @ 12:00pm - Some undecided location.
+    %h4 Reception
+    %p 15 August, 2015 @ 6:00pm - Some undecided location.
+    %p
+      To RSVP, just
+      = link_to( 'follow this link.', edit_invite_url( :id => @invite.id, :token => @invite.token ) )

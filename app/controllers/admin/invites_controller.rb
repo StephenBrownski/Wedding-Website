@@ -15,8 +15,13 @@ module Admin
     def create
       @invite = Invite.new(invite_params)
 
+
       if @invite.save
         flash[:success] = 'Invite Successfully Created'
+
+        # Tell the UserMailer to send a welcome email after save
+        InviteMailer.confirmation_email(@invite).deliver
+
         redirect_to :action => 'index'
       end
     end
