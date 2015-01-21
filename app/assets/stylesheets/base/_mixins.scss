@@ -1,0 +1,72 @@
+@mixin clearfix {
+  display: block;
+  & { *zoom: 1; } // IE fix
+  &:after { content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden; }
+}
+
+@mixin box-sizing() {
+  -webkit-box-sizing: border-box; // Safari <= 5
+     -moz-box-sizing: border-box; // Firefox <= 19
+          box-sizing: border-box;
+}
+
+@mixin container {
+  @include clearfix;
+  margin: 0 auto;
+  width: 960px;
+}
+
+@mixin column($width, $margin-right: 0) {
+  width: $width;
+  display: block;
+  float: left;
+  margin: 0 $margin-right 0 0;
+}
+
+@mixin border-radius ($radius) {
+  position: relative;
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadow ($shadow) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+      -ms-box-shadow: $shadow;
+       -o-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+@mixin transition ($transition: all 0.2s ease-in-out) {
+  -webkit-transition: $transition;
+  -moz-transition:    $transition;
+  -ms-transition:     $transition;
+  -o-transition:      $transition;
+  transition:         $transition;
+}
+
+@mixin respond-to($media) {
+  @if $media == "sm" {
+    @media only screen and (min-width: $break-sm) { @content; }
+  }
+  @else if $media == "md" {
+    @media only screen and (min-width: $break-md) { @content; }
+  }
+  @else if $media == "lg" {
+    @media only screen and (min-width: $break-lg) { @content; }
+  }
+}
+
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color; /* The Fallback */
+  background: rgba($color, $opacity);
+}
+
+*,
+*:before,
+*:after {
+  @include box-sizing;
+}

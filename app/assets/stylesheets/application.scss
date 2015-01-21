@@ -9,7 +9,28 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
- *= require_tree .
- *= require_self
  */
+
+// Normalize should always be first
+@import "base/normalize";
+
+// Vendor styles are imported before custom styles
+@import "vendor/bootstrap.min";
+@import "vendor/fontawesome";
+@import "vendor/datatables";
+
+// Base Styles
+@import "base/constants";
+@import "base/mixins";
+@import "base/typography";
+
+// Layout Styles
+@import "layout/header";
+@import "layout/body";
+@import "layout/footer";
+
+// Page Styles - These are page-specific styles
+// @import "pages/home";
+
+// Widget Styles - These are repeated across multiple pages/views
+@import "widgets/buttons";

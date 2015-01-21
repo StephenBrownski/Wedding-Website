@@ -1,0 +1,70 @@
+@mixin body-font-stack {
+  font-family: 'Open Sans', sans-serif;
+}
+
+@mixin header-font-stack {
+  font-family: Helvetica ,Arial,sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-weight: 300;
+}
+
+body {
+  @include body-font-stack;
+  font-size: 16px;
+  color: $body-font-color;
+  line-height: $body-line-height;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @include header-font-stack;
+}
+
+h5,
+h6 {
+  @include body-font-stack;
+}
+
+p,
+ul,
+ol,
+hr,
+blockquote { margin: 0 0 20px 0; }
+
+ol,
+ul {
+  padding: 0 0 0 20px;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+a,
+a:focus,
+a:visited {
+  color: $link-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $link-hover-color;
+  text-decoration: none;
+}
+
+@include respond-to(sm) {
+  a[href^='tel:'] {
+    pointer-events: none;
+  } 
+}
+
+.upper {
+  text-transform: uppercase;
+}
