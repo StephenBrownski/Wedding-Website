@@ -23,3 +23,7 @@ gem 'turbolinks'
 gem 'spring',        group: :development
 
 gem 'haml-rails'
+
+gem 'devise'
+
+gem 'dotenv-rails', :groups => [:development, :test]
