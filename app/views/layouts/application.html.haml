@@ -8,8 +8,19 @@
     = csrf_meta_tags
   %body
 
-    - if flash.present?
-      %p
-        = flash[:error]
+    - if notice.present?
+      %p.alert.alert-success
+        = notice
+    - if alert.present?
+      %p.alert.alert-danger
+        = alert
+    - if flash[:success].present?
+      %p.alert.alert-success
         = flash[:success]
+        
+    - if flash[:error].present?
+      %p.alert.alert-danger
+        = flash[:error]
+
+
     = yield
