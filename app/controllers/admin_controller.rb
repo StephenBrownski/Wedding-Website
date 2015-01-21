@@ -1,7 +1,7 @@
 class AdminController < ApplicationController
 
   # Handle redirects for logins
-  before_action :authorize_user, :except => [:login_page, :login, :logout]
+  before_action :authenticate_user!, :except => [:login_page, :login, :logout]
 
   def index
     
