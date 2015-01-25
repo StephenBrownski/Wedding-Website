@@ -31,6 +31,28 @@
           map: map,
           title: "Hunter's Green Golf Club"
       });
+
+      var contentString = '<div class="venue-map-tooltip">'+
+        '<h3 class="map-heading">Hunter\'s Green<br>Golf Club</h3>'+
+        '<p>'+
+        '24427 Twp Rd 542'+
+        '<br>'+
+        'Sturgeon County, AB'+
+        '<br>'+
+        'T8T 1L4'+
+        '</p>'+
+        '<a target="_blank" href="https://goo.gl/maps/oZlZG">'+
+        'View on Google Maps'+
+        '</a>'+
+        '</div>';
+
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString
+      });
+
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map,marker);
+      });
   }
 
 })(jQuery);
