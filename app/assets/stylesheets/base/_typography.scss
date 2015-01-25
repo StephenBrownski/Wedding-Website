@@ -67,12 +67,6 @@ a:hover {
   border-bottom: 1px solid $link-hover-color;
 }
 
-@include respond-to(sm) {
-  a[href^='tel:'] {
-    pointer-events: none;
-  } 
-}
-
 .text-muted {
   color: lighten( $body-font-color, 40%);
 }
