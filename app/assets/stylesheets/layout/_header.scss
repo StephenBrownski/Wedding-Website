@@ -19,24 +19,37 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0,0,0,0.4);
+  // background: rgba(0,0,0,0.4);
+  background: rgba( darken($teal, 10%), 0.4 );
   z-index: 10;
 }
 
 .header-content {
   position: relative;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 100px;
+  padding-bottom: 30px;
   z-index: 20;
   color: #fff;
   font-size: 1.4em;
+  text-align: center;
 
   p { margin-bottom: 30px; }
+
+  @include respond-to(sm) {
+    text-align: left;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .title-text {
-  font-size: 72px;
-  text-transform: uppercase;
+  font-size: 48px;
+  color: #fff;
+  margin-top: 0;
+
+  @include respond-to(sm) {
+    font-size: 72px;
+  }
 }
 
 .header {
