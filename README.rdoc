@@ -1,28 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Well, I had been with my girlfriend for over four years, and decided it was time to 'pop the question'. She said yes, and we eventually decided we should make our own site.
 
-Things you may want to cover:
+This is a joint design job between the two of us, with myself doing all the back end development.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This is also my first foray into a from-scratch Rails app, which will prove to be quite the learning experience.
