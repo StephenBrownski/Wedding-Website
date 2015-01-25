@@ -3,13 +3,13 @@ $break-sm: 767px;
 $break-md: 991px;
 $break-lg: 1199px;
 
-// Font
-$body-font-color: #333;
-$body-line-height: 1.4em;
-
 // Colours
 $teal: #00786e;
 $grey: #3f3b38;
 
 $link-color: $teal;
 $link-hover-color: darken( $teal, 10% );
+
+// Font
+$body-font-color: $grey;
+$body-line-height: 1.4em;
