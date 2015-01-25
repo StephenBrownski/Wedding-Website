@@ -27,3 +27,6 @@ gem 'haml-rails'
 gem 'devise'
 
 gem 'dotenv-rails', :groups => [:development, :test]
+
+# Fixes static assets on production without needing Nginx
+gem 'rails_serve_static_assets', group: [:production]
