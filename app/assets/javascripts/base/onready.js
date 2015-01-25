@@ -1,0 +1,5 @@
+(function($){
+
+  // Some code
+
+})(jQuery);
