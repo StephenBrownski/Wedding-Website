@@ -1,14 +1,60 @@
 .main-menu-wrap {
-  @include box-shadow(0 1px 3px rgba(0,0,0,0.3));
+  @include box-shadow(0 1px 3px rgba(0,0,0,0.4));
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.95);
   height: 70px;
   z-index: 100;
 }
 
-.main-menu {
+.menu-logo {
+  line-height: 70px;
+}
 
+.main-menu {
+  line-height: 70px;
+}
+
+.menu-links {
+  @include header-font-stack();
+  text-transform: uppercase;
+  font-weight: 500;
+  list-style-type: none;
+  margin: 0;
+  font-size: 14px;
+
+  li {
+    display: inline-block;
+    padding: 0 10px;
+    margin: 0;
+
+    a {
+      @include transition();
+      padding: 5px 0;
+      border-bottom-color: rgba( $grey, 0 );
+
+      &:hover,
+      &.active {
+        color: $grey;
+      }
+
+      &:hover {
+        border-bottom-color: $grey;
+      }
+    }
+
+    &.last a {
+      @include border-radius(3px);
+      padding: 10px 15px;
+      border: 2px solid $link-color;
+
+      &:hover {
+        color: #fff;
+        border-color: $link-color;
+        background: $link-color;
+      }
+    }    
+  }
 }
