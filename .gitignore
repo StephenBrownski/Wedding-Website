@@ -20,5 +20,4 @@
 
 # Ignore databse.yml
 database.yml
-secrets.yml
 .env
