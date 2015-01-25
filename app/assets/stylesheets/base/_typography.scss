@@ -1,5 +1,6 @@
 @mixin body-font-stack {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.5px;
 }
 
 @mixin header-font-stack {
@@ -8,6 +9,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
+  letter-spacing: 0;
   font-weight: 300;
 }
 
@@ -23,11 +25,15 @@ h2,
 h3,
 h4 {
   @include header-font-stack;
+  margin-top: 0;
+  color: $teal;
 }
 
 h5,
 h6 {
   @include body-font-stack;
+  margin-top: 0;
+  color: $teal;
 }
 
 p,
@@ -52,11 +58,13 @@ a:focus,
 a:visited {
   color: $link-color;
   text-decoration: none;
+  border-bottom: 1px solid $link-color;
 }
 
 a:hover {
   color: $link-hover-color;
   text-decoration: none;
+  border-bottom: 1px solid $link-hover-color;
 }
 
 @include respond-to(sm) {
@@ -65,6 +73,6 @@ a:hover {
   } 
 }
 
-.upper {
-  text-transform: uppercase;
+.text-muted {
+  color: lighten( $body-font-color, 40%);
 }
