@@ -1,4 +1,49 @@
-Hello world
+.header-wrap
+  %img.header-image{:src => 'http://lorempixel.com/1200/600/'}
+  .header-overlay
+  .header-content.container
+    .row
+      .col-sm-8
+        %h1.title-text
+          We're getting married!
+        %p
+          This is some sample text that gives a brief introduction. It'll probably say how happy we are to celebrating with you and blah blah blah sappy sappy sappy.
+        %button.btn.btn-secondary
+          Call to action
+
+.homepage-wrap
+  .homepage-content.container
+    %h2.text-center This is our super cool wedding website. What do you guys think about it?
+
+    %h4.text-center Ceremony and reception to be held at same venue.
+
+    .row.venue-info
+      .col-sm-6.text-center
+        %h3 The Venue
+        %h4 Hunter's Green Golf Club
+        %p 
+          24427 Twp Rd 542
+          %br
+          Sturgeon County, AB
+          %br
+          T8T 1L4
+
+      .venue-divider
+      .col-sm-6.text-center
+        %h3 The Day
+        %p
+          Saturday, August 15th, 2015
+        %h4 Ceremnony
+        %p
+          12:00pm
+
+        %h4 Reception
+        %p
+          Cocktail hour @ 5:00pm
+          %br
+          Dinner to be served @ 6:00pm
+          %br
+          Dance to follow
 
 
 - if user_signed_in?
