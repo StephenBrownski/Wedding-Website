@@ -1,5 +1,42 @@
 .header-wrap {
+  position: relative;
+  overflow: hidden;
+}
 
+.header-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 5;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 10;
+}
+
+.header-content {
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  z-index: 20;
+  color: #fff;
+  font-size: 1.4em;
+
+  p { margin-bottom: 30px; }
+}
+
+.title-text {
+  font-size: 72px;
+  text-transform: uppercase;
 }
 
 .header {
