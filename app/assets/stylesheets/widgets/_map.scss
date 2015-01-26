@@ -1,8 +1,24 @@
-.map-row {
+.map-wrap {
   padding-top: 60px;
   padding-bottom: 60px;
+  background: $teal;
+  color: #fff;
+  font-weight: 300;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: #fff;
+    font-weight: 600;
+  }
 }
 
 #venue-map {
   height: 400px;
+}
+
+.map-notes {
+  padding-top: 60px;
 }
