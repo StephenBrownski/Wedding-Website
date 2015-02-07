@@ -35,11 +35,15 @@
     a {
       @include transition();
       padding: 5px 0;
-      border-bottom-color: rgba( $grey, 0 );
+      border-bottom-color: rgba( $teal, 0 );
 
       &:hover,
       &.active {
         color: $grey;
+      }
+
+      &.active {
+        border-bottom-color: rgba( $grey, 0 );
       }
 
       &:hover {
