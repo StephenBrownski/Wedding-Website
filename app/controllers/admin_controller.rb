@@ -14,7 +14,6 @@ class AdminController < ApplicationController
   end
 
   def login
-    name = '60b0x3s'
 
     if params[:secret_code] == name
       flash[:success] = 'You have successfully logged in!.'
