@@ -33,7 +33,13 @@
   font-size: 1.4em;
   text-align: center;
 
-  p { margin-bottom: 30px; }
+  p {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   @include respond-to(sm) {
     text-align: left;
