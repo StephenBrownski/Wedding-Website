@@ -2,14 +2,14 @@
   .main-menu.container
     .row
       %h4.col-sm-4.menu-logo
-        =link_to 'Stephen and Alex', '/'
+        = link_to 'Stephen and Alex', '/'
       .col-sm-8.text-right
         %ul.menu-links
           %li
-            %a{:href=> '#'} Our Story
+            = link_to 'Our Story', '/story', { :class => ( 'active' if params[:action] == 'story' ) }
           %li
-            %a.active{:href=> '#'} Accommodations
+            = link_to 'Accommodations', '/accommodations', { :class => ( 'active' if params[:action] == 'accommodations' ) }
           %li
-            %a{:href=> '#'} Registry
+            = link_to 'Registry', '/registry', { :class => ( 'active' if params[:action] == 'registry' ) }
           %li.last
-            %a{:href=> '#'} RSVP
+            = link_to 'RSVP', '#', { :class => ( 'active' if params[:action] == 'rsvp' ) }

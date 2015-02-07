@@ -1,0 +1,56 @@
+.header-wrap
+  = image_tag "header-image-temp.jpg", :class => 'header-image'
+  .header-overlay
+  .header-content.container
+    .row
+      .col-sm-8.col-sm-offset-2.text-center
+        %h1.title-text
+          Accommodations
+        %p
+          Enjoy your visit!
+
+.venue-wrap
+  .venue-content.container
+    .row.venue-info
+      .col-sm-6.text-center
+        %h3 The Venue
+        %h4 Hunter's Green Golf Club
+        %p 
+          24427 Twp Rd 542
+          %br
+          Sturgeon County, AB
+          %br
+          T8T 1L4
+        %p
+          %i.text-muted
+            Ceremony and reception
+            %br
+            to be held at same venue.
+        %button.btn.btn-default
+          View a map
+
+      .venue-divider
+      .col-sm-6.text-center
+        %h3 The Day
+        %p
+          Saturday, August 15th, 2015
+        %h4 Ceremony
+        %p
+          12:00pm
+
+        %h4 Reception
+        %p
+          Cocktail hour @ 5:00pm
+          %br
+          Dinner to be served @ 6:00pm
+          %br
+          Dance to follow
+
+= render "shared/map"
+
+
+
+- # if user_signed_in?
+= # link_to "Admin", '/admin'
+- # else
+= # link_to "Login", new_user_session_path

@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'pages#index'
+  
+  get 'story' => 'pages#story'
+  get 'accommodations' => 'pages#accommodations'
+  get 'registry' => 'pages#registry'
 
 
   # Admin routes
