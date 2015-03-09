@@ -32,8 +32,8 @@ h4 {
 h5,
 h6 {
   @include body-font-stack;
+  text-transform: uppercase;
   margin-top: 0;
-  color: $teal;
 }
 
 p,
@@ -69,4 +69,30 @@ a:hover {
 
 .text-muted {
   color: lighten( $body-font-color, 40%);
+}
+
+.header-desc {
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 5;
+    background: $grey-lt;
+    height: 1px;
+    width: 100%;
+    top: 50%;
+    margin-top: -.5px;
+  }
+
+  span {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    background: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

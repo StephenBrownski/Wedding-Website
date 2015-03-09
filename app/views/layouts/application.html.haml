@@ -6,7 +6,6 @@
     = stylesheet_link_tag    'application', media: 'all'
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700|Roboto:400,100,300,100italic,300italic,400italic,500,500italic,700,700italic,900,900italic'
     = javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC-uKCcwL6atXSahxIqSiZOk1OhXLkbIzs&sensor=false'
-    = javascript_include_tag 'application'
     = csrf_meta_tags
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
   %body
@@ -34,3 +33,5 @@
         .row
           .col-sm-6.col-sm-offset-3.text-center
             &copy; 2015. Designed and developed by Stephen Brown and Alex Pankratz
+    
+    = javascript_include_tag 'application'

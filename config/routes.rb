@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'story' => 'pages#story'
   get 'accommodations' => 'pages#accommodations'
   get 'registry' => 'pages#registry'
+  get 'rsvp' => 'rsvps#new'
 
 
   # Admin routes
@@ -22,10 +23,10 @@ Rails.application.routes.draw do
 
   # Admin Invites routes
   namespace :admin do
-    resources :invites, :except => [:edit, :update]
+    resources :rsvps, :except => [:edit, :update]
   end
 
-  resources :invites, :only => [:show, :edit, :update]
+  resources :rsvps, :only => [:new, :create]
 
 
 

@@ -9,3 +9,68 @@
 .page-content {
 
 }
+
+.page-content {
+  background: #fff;
+  padding-bottom: 60px;
+  position: relative;
+  z-index: 15;
+}
+
+.over-hidden {
+  overflow: hidden;
+  position: relative;
+}
+
+.vertical-divider {  
+  position: static;
+  width: 100%;
+  clear: both;
+  height: 1px;
+  background: #ccc;
+  margin: 30px 0;
+
+  @include respond-to(sm) {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    height: 1000px;
+    width: 1px;
+  }
+}
+
+.page-arrow {
+  @include box-shadow(0 1px 10px rgba(0,0,0,0.8));
+  position: relative;
+  padding-bottom: 0;
+
+  > .container {
+    background: #fff;
+  }
+
+  &:before,
+  &:after {
+    display: block;
+    position: absolute;
+    content: '';
+    border-top: 10px solid #fff;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    top: 100%;
+    left: 50%;
+    margin-left: -20px;
+    z-index: 11;
+  }
+
+  &:before {
+    z-index: 1;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    border-top-color: rgba(0,0,0,0.8);
+  }
+}

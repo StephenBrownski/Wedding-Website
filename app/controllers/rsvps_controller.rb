@@ -1,36 +1,40 @@
-class InvitesController < ApplicationController
+class RsvpsController < ApplicationController
 
   def index
 
   end
 
+  def new
+    @rsvp = Rsvp.new
+  end
+
   def show
-    @invite = Invite.find(params[:id])
+    @rsvp = Rsvp.find(params[:id])
     @token = params[:token]
 
-    if @invite.token != @token
+    if @rsvp.token != @token
       flash[:error] = 'There is something wrong with your RSVP URL.'
       redirect_to root_path
     end
   end
 
   def edit
-    @invite = Invite.find(params[:id])
+    @rsvp = Rsvp.find(params[:id])
     @token = params[:token]
 
-    if @invite.token != @token
+    if @rsvp.token != @token
       flash[:error] = 'There is something wrong with your RSVP URL.'
       redirect_to root_path
     end
   end
 
   def update
-    @invite = Invite.find(params[:id])
+    @rsvp = Rsvp.find(params[:id])
     @token = params[:token]
 
-    if @invite.update(invite_params) && @invite.token == @token
+    if @rsvp.update(rsvp_params) && @rsvp.token == @token
       flash[:success] = 'Details Saved'
-      redirect_to :action => 'show', :token => @invite.token
+      redirect_to :action => 'show', :token => @rsvp.token
     else
       flash[:error] = 'There is something wrong with your RSVP URL.'
       redirect_to root_path
@@ -39,8 +43,8 @@ class InvitesController < ApplicationController
 
   private
 
-  def invite_params
-    params.require(:invite).permit(:name, :email, :phone, :num_guests, :status, :token)
+  def rsvp_params
+    params.require(:rsvp).permit(:name, :email, :phone, :num_guests, :status, :token)
   end
 
 end

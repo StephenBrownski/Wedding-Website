@@ -6,6 +6,7 @@ $break-lg: 1199px;
 // Colours
 $teal: #00786e;
 $grey: #3f3b38;
+$grey-lt: lighten( $grey, 40%);;
 
 $link-color: $teal;
 $link-hover-color: darken( $teal, 10% );

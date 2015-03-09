@@ -1,0 +1,84 @@
+.story-intro {
+  margin-bottom: 60px;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.story-main {
+
+  blockquote {
+    @include header-font-stack();
+    margin: 0 auto;
+    padding: 0 0 15px;
+    margin-bottom: 15px;
+    background: #fff;
+    border-bottom: 1px solid $grey;
+    border-left: none;
+    position: relative;
+    display: block;
+    width: 66.6666666666666%;
+    color: $teal;
+    font-size: 1.6em;
+    line-height: 1.2em;
+
+    &:before,
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      border-top: 10px solid #fff;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      top: 100%;
+      left: 50%;
+      margin-left: -20px;
+      z-index: 11;
+    }
+
+    &:after {
+      z-index: 10;
+      border-top-color: $grey;
+      border-top-width: 11px;
+      border-left-width: 22px;
+      border-right-width: 22px;
+      margin-left: -22px;
+    }
+
+    &.quote-right {
+      float: right;
+      margin-right: -33.333333333333%;
+      left: 15px;
+
+      &:after,
+      &:before {
+        left: 30px;
+        margin-left: 0;
+      }
+
+      &:after {
+        margin-left: -2px;
+      }
+    }
+
+    &.quote-left {
+      text-align: right;
+      float: left;
+      margin-left: -33.333333333333%;
+      right: 15px;
+
+      &:after,
+      &:before {
+        right: 30px;
+        left: auto;
+        margin-left: 0;
+      }
+
+      &:after {
+        margin-right: -2px;
+      }
+    }
+  }
+}
+

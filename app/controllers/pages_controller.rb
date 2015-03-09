@@ -16,4 +16,8 @@ class PagesController < ApplicationController
     @page_title = 'Gift Registry'
   end
 
+  def rsvp
+    @page_title = 'RSVP'
+  end
+
 end
