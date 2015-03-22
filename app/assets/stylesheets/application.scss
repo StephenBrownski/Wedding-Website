@@ -32,8 +32,10 @@
 // Page Styles - These are page-specific styles
 @import "pages/home";
 @import "pages/story";
+@import "pages/rsvp";
 
 // Widget Styles - These are repeated across multiple pages/views
 @import "widgets/main_menu";
 @import "widgets/buttons";
 @import "widgets/map";
+@import "widgets/alerts";

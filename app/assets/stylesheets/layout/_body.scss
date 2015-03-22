@@ -4,6 +4,10 @@
 
 .page-wrap {
   padding: 60px 0;
+
+  &.admin {
+    padding-top: 160px;
+  }
 }
 
 .page-content {

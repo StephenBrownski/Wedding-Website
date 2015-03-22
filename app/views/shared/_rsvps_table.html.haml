@@ -1,0 +1,32 @@
+- if @rsvps.present?
+  %table.display#example
+    %thead
+      %tr
+        %td Name
+        %td Response
+        %td Guests
+        %td Diet Needs
+        %td Songs
+        %td Actions
+    - @rsvps.each do |rsvp|
+      %tr
+        %td
+          = rsvp.name
+        %td
+          = rsvp.status
+        %td
+          = rsvp.guests
+        %td
+          = rsvp.diet
+        %td
+          = rsvp.songs
+        %td
+          = link_to "View", admin_rsvp_path(rsvp.id)
+          %br
+          = link_to "Delete", admin_rsvp_path(rsvp.id), :method => :delete, :data => { :confirm => "Are you sure?" }
+
+- else
+  %p No rsvps to show.
+
+%br
+= link_to "Back to admin home", admin_path

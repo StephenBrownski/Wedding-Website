@@ -1,7 +1,9 @@
-%p Hello Admin!
+.page-wrap.admin
+  .page-content.container
+    .row
+      .col-sm-8.col-sm-offset-2.text-center
+        %p Hello Admin!
 
-= link_to "View all Invites", admin_invites_path
-%br
-= link_to "Create a new Invite", new_admin_invite_path
-%br
-= link_to "Logout", destroy_user_session_path, method: :delete
+        = link_to "View all Invites", admin_rsvps_path
+        %br
+        = link_to "Logout", destroy_user_session_path, method: :delete

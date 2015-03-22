@@ -10,22 +10,40 @@
 .rsvp-wrap
   .rsvp-content.container
     .row
-      .col-sm-8.col-sm-offset-2.text-center
+      .col-sm-4.col-sm-offset-4.text-center
         %h3 RSVP Online
 
         = form_for [@rsvp], :html => { :class => 'form-rsvp' } do |f|
-          = f.label :name
-          = f.text_field :name
-          = f.label :status_accept do
-            = f.radio_button :status, 'accept'
-            I will celebrate with you in person
-          = f.label :status_decline do
-            = f.radio_button :status, 'decline'
-            I will celebrate with you in spirit
-          = f.label :status_decline do
-            = f.radio_button :status, 'decline'
-            %span.small (I just don't really want to celebrate at all...)
-          = f.submit 'RSVP'
+          .rsvp-name
+            = f.label :name
+            = f.text_field :name
+          .rsvp-radios
+            = f.label :status_accept do
+              = f.radio_button :status, 'accept', :value => 'Accepted'
+              I will celebrate with you in person
+            = f.label :status_decline do
+              = f.radio_button :status, 'decline', :value => 'Declined'
+              I will celebrate with you in spirit
+            = f.label :status_decline_2 do
+              = f.radio_button :status, 'decline_2', :value => 'Declined'
+              %span.small (I just don't really want to celebrate at all...)
+
+          .rsvp-textarea
+            = f.label :guests do
+              Guests in Party
+            = f.text_area :guests
+
+          .rsvp-textarea
+            = f.label :diet do
+              Dietary Needs
+            = f.text_area :diet
+
+          .rsvp-textarea
+            = f.label :songs do
+              I'll dance if the DJ plays:
+            = f.text_area :songs
+
+          = f.submit 'RSVP', :class => 'btn rsvp-submit'
 
 
 

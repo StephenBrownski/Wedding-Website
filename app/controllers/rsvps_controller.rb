@@ -28,6 +28,19 @@ class RsvpsController < ApplicationController
     end
   end
 
+  def create
+    @rsvp = Rsvp.new(rsvp_params)
+
+    if @rsvp.save
+      flash[:success] = 'Thank you for your RSVP!'
+
+      # Tell the UserMailer to send a welcome email after save
+      # RsvpMailer.confirmation_email(@rsvp).deliver
+
+      redirect_to :action => 'new'
+    end
+  end
+
   def update
     @rsvp = Rsvp.find(params[:id])
     @token = params[:token]

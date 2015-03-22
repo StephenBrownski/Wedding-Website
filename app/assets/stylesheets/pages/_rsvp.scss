@@ -1,0 +1,67 @@
+.rsvp-content {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.form-rsvp {
+  text-align: left;
+
+  > div {
+    margin-bottom: 30px;
+  }
+
+  label {
+    @include header-font-stack();
+    text-transform: uppercase;
+    color: $teal;
+  }
+
+  input[type="text"],
+  textarea {
+    @include border-radius(3px);
+    border: 1px solid $teal;
+  }
+}
+
+.rsvp-name {
+  @include clearfix;
+  label {
+    float: left;
+    clear: left;
+  }
+
+  input {
+    float: left;
+    clear: left;
+    width: 100%;
+    display: block;
+  }
+}
+
+.rsvp-radios {
+  @include clearfix;
+  width: 100%;
+
+  label {
+    @include body-font-stack();
+    color: $grey;
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+  }
+}
+
+.rsvp-textarea {
+  textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    display: block;
+    max-height: 150px;
+  }
+}
+
+.rsvp-submit {
+  width: 100%;
+}

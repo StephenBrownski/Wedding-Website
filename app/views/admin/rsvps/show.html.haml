@@ -1,22 +1,21 @@
-%p Here is your invitation information!
+.page-wrap.admin
+  .page-content.container
+    .row
+      .col-sm-8.col-sm-offset-2.text-center
 
-%ul
-  %li
-    Name: 
-    = @invite.name
-  %li
-    Email: 
-    = @invite.email
-  %li
-    Phone: 
-    = @invite.phone || 'Not Entered'
-  %li
-    Num Guests: 
-    = @invite.num_guests || 'Not selected'
-  %li
-    Status: 
-    = @invite.status
+        %p Here is your invitation information!
 
-= link_to "Back to list view", admin_invites_path
-%br
-= link_to "Delete", admin_invite_path, :method => :delete, :data => { :confirm => "Are you sure?" }
+        %ul
+          %li
+            Name: 
+            = @rsvp.name
+          %li
+            Guests: 
+            = @rsvp.guests || 'No Guests'
+          %li
+            Status: 
+            = @rsvp.status
+
+        = link_to "Back to list view", admin_rsvps_path
+        %br
+        = link_to "Delete", admin_rsvp_path, :method => :delete, :data => { :confirm => "Are you sure?" }
