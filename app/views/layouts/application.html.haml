@@ -9,24 +9,24 @@
     = stylesheet_link_tag '//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css'
     = javascript_include_tag '//cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js'
     = javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC-uKCcwL6atXSahxIqSiZOk1OhXLkbIzs&sensor=false'
-    = csrf_meta_tags
+
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
   %body
 
-    - if notice.present?
+    - if flash[:notice].present?
       .alert-wrap
         .container
           %p.alert.alert-success
             %button.close-alert
               %i.fa.fa-close
-            = notice
-    - if alert.present?
+            = flash[:notice]
+    - if flash[:alert].present?
       .alert-wrap
         .container
           %p.alert.alert-danger
             %button.close-alert
               %i.fa.fa-close
-            = alert
+            = flash[:alert]
     - if flash[:success].present?
       .alert-wrap
         .container
