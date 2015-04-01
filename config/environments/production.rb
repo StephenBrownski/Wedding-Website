@@ -78,8 +78,8 @@ Rails.application.configure do
 
   config.middleware.use ExceptionNotification::Rack,
    :email => {
-     :email_prefix => "[ASPB] ",
-     :sender_address => %{"ASPB" <pbiol@aspb.ab.ca>},
-     :exception_recipients => %w{errors@agilestyle.com}
+     :email_prefix => "[Wedding Invite App] ",
+     :sender_address => %{"WDNG" <stephen@agilestyle.com>},
+     :exception_recipients => %w{stephen@agilestyle.com}
    }
 end
