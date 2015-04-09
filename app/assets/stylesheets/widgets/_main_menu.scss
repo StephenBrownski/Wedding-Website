@@ -48,22 +48,23 @@
   }
 
   @include respond-to(sm) {
-    display: block;
+    display: block !important;
     position: relative;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background: none;
-    line-height: 70px;
+    line-height: 50px;
 
     li {
       display: inline-block;
-      padding: 0 10px;
+      padding: 10px;
+      border: none;
 
       a {
         @include transition();
-        padding: 5px 0;
+        padding: 0;
         border-bottom-color: rgba( $teal, 0 );
 
         &:hover,
@@ -80,17 +81,20 @@
         }
       }
 
-      &.last a {
-        @include border-radius(3px);
-        padding: 10px 15px;
-        border: 2px solid $link-color;
+      &.last {
+        a {
+          @include border-radius(3px);
+          padding: 10px 15px;
+          border: 2px solid $link-color;
+          line-height: 20px;
 
-        &:hover {
-          color: #fff;
-          border-color: $link-color;
-          background: $link-color;
+          &:hover {
+            color: #fff;
+            border-color: $link-color;
+            background: $link-color;
+          }
         }
-      }    
+      }   
     }
   }
 }
