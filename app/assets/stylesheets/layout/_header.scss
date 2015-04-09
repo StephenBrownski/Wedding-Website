@@ -5,12 +5,17 @@
 
 .header-image {
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  min-width: 100%;
-  min-height: 100%;
+  max-height: 170%;
   z-index: 5;
+
+  @include respond-to(sm) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+  }
 }
 
 .header-overlay {
@@ -58,6 +63,11 @@
   }
 }
 
-.header {
-  
+@media only screen and (max-width: ($break-sm - 1)) {
+  .header-text {
+    text-align: center !important;
+    .btn {
+      width: 100%;
+    }
+  }
 }

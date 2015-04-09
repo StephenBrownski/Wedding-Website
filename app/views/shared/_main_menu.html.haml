@@ -1,9 +1,9 @@
 .main-menu-wrap
   .main-menu.container
-    .row
-      %h4.col-sm-4.menu-logo
+    .row.relative
+      %h4.col-sm-4.menu-logo.pull-left
         = link_to 'Stephen and Alex', '/'
-      .col-sm-8.text-right
+      .pull-right.text-right
         %ul.menu-links
           %li
             = link_to 'Our Story', '/story', { :class => ( 'active' if params[:action] == 'story' ) }
@@ -13,3 +13,4 @@
             = link_to 'Registry', '/registry', { :class => ( 'active' if params[:action] == 'registry' ) }
           %li.last
             = link_to 'RSVP', '/rsvp', { :class => ( 'active' if params[:action] == 'rsvp' ) }
+        %button.fa.fa-navicon.visible-xs-block.right.menu-toggle
