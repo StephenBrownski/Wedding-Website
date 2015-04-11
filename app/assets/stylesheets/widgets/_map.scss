@@ -15,6 +15,14 @@
   }
 }
 
+.map-container {
+  padding: 0 30px;
+
+  @include respond-to(sm) {
+    padding: 0 15px;
+  }
+}
+
 #venue-map,
 #accommodation-map {
   height: 400px;
