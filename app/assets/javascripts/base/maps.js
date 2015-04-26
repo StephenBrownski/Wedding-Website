@@ -61,7 +61,7 @@
           zoom: 13,
 
           // The latitude and longitude to center the map (always required)
-          center: new google.maps.LatLng(53.655865, -113.509439), // Hunter's Green Golf Club
+          center: new google.maps.LatLng(53.582005, -113.56024), // Hunter's Green Golf Club
 
           // How you would like to style the map. 
           // This is where you would paste any style found on Snazzy Maps.
@@ -77,21 +77,19 @@
 
       // Let's also add a marker while we're at it
       var marker = new google.maps.Marker({
-          position: new google.maps.LatLng(53.655865, -113.509439),
+          position: new google.maps.LatLng(53.582005, -113.56024),
           map: map,
-          title: "Hunter's Green Golf Club"
+          title: "Chateau Nova Yellowhead"
       });
 
       var contentString = '<div class="venue-map-tooltip">'+
-        '<h3 class="map-heading">Chateau Nova</h3>'+
+        '<h3 class="map-heading">Chateau Nova Yellowhead</h3>'+
         '<p>'+
-        '24427 Twp Rd 542'+
+        '13920 Yellowhead Trail'+
         '<br>'+
-        'Sturgeon County, AB'+
-        '<br>'+
-        'T8T 1L4'+
+        'Edmonton, AB T5L 3C2'+
         '</p>'+
-        '<a target="_blank" href="https://goo.gl/maps/oZlZG">'+
+        '<a target="_blank" href="https://goo.gl/maps/cXO98">'+
         'View on Google Maps'+
         '</a>'+
         '</div>';

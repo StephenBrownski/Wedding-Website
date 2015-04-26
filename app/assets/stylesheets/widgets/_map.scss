@@ -15,6 +15,17 @@
   }
 }
 
+.venue-map-tooltip {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    color: $grey;
+  }
+}
+
 .map-container {
   padding: 0 30px;
 

@@ -11,14 +11,33 @@
 
 .page-wrap.page-arrow
   .page-content.container
-    .row
-      .col-sm-8.col-sm-offset-2.text-center
-        %h3 Accommodation information to come soon!
-        =#%p We have rooms blocked off for wedding guests at a { hotel name } in the { general location } area. Mention the Brown–Pankratz wedding when you book to get the group discount.
+    .row.over-hidden
+      .col-sm-6.text-center
+        %h3 North Edmonton
+        %h4 Chateau Nova Yellowhead
+        %p 
+          13920 Yellowhead Trail
+          %br
+          Edmonton, AB T5L 3C2
+        %p
+          %i.fa.fa-phone
+            (780) 454.5441
+          %br
+          %i.fa.fa-fax
+            (780) 454.4348
+        
+        %p.text-muted
+          Ask for the Pankratz/Brown wedding
+
+      .vertical-divider
+      .col-sm-6.text-center
+        %h3 West Edmonton
+        %h4 Reservation info coming soon.
+             
 
 
-=#.map-wrap
-=#  .container
-=#    .row.map-row
-=#      .col-sm-6.col-sm-offset-3.map-container
-=#        #accommodation-map
+.map-wrap
+  .container
+    .row.map-row
+      .col-sm-6.col-sm-offset-3.map-container
+        #accommodation-map
