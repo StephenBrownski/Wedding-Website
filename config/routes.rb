@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'accommodations' => 'pages#accommodations'
   get 'registry' => 'pages#registry'
   get 'rsvp' => 'rsvps#new'
+  get 'rsvps' => 'rsvps#new'
 
 
   # Admin routes
