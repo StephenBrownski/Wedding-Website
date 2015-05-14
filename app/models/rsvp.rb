@@ -5,7 +5,7 @@ class Rsvp < ActiveRecord::Base
     { :text => 'I will celebrate in spirit', :value => 'declined' }
   ]
   
-  validates :name, :status, :guests, :presence => true
+  validates :name, :status, :presence => true
 
   # attr_readonly :token
   # validates_presence_of :token
