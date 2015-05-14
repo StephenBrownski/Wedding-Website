@@ -33,11 +33,11 @@ class RsvpsController < ApplicationController
 
     if @rsvp.save
       flash[:success] = 'Thank you for your RSVP!'
-
-      # Tell the UserMailer to send a welcome email after save
-      # RsvpMailer.confirmation_email(@rsvp).deliver
-
       redirect_to :action => 'new'
+    else
+      flash.now[:error] = 'There is something wrong with your RSVP: '<< @rsvp.errors.full_messages.join(', ')
+      @rsvp.errors.clear
+      render :action => 'new'
     end
   end
 
