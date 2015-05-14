@@ -11,19 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150322175054) do
+ActiveRecord::Schema.define(version: 20150514215843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "rsvps", force: true do |t|
     t.string   "name"
-    t.string   "status",     default: "Awaiting Reply"
+    t.string   "status"
     t.string   "email"
     t.string   "phone"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "token",      default: "1234567890",     null: false
+    t.string   "token",      default: "1234567890", null: false
     t.string   "guests"
     t.string   "diet"
     t.string   "songs"
