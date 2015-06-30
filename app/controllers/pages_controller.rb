@@ -8,6 +8,10 @@ class PagesController < ApplicationController
     @page_title = 'Our Story'
   end
 
+  def wedding_party
+    @page_title = 'Wedding Party'
+  end
+
   def accommodations
     @page_title = 'Accommodations'
   end
